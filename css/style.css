@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1f2023;
+    
+}
+
+.ola, .hi, .ciao, .hola, .bonjour, .hallo, .gruezi  {
+    font-size: 50px;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.mostrar {
+    opacity: 1;
+}
+
+.inicio {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    color: white;
+}
+
+.mostrar-inicio {
+    opacity: 1;
+}
+
+/* -------- Estiliza Menu -------- */ 
+.menu {
+    margin-bottom: 10px;
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu ul li:last-child {
+    margin-right: 0;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #F4F5F0;
+    font-size: 20px;
+    padding: 10px 15px;
+    position: relative;
+}
+
+.menu ul a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.menu ul a:hover::after, ul select {
+    background-color: #F4F5F0;
+}
+
+.menu ul a.active::after {
+    background-color: #F4F5F0;
+}
+
+.menu ul select {
+    appearance: none;
+    background-color: #1f2023;
+    color: #F4F5F0;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    vertical-align: middle;
+    border-bottom: 2px solid transparent;
+}
+.menu ul select:hover {
+    border-bottom-color: #F4F5F0; 
+}
+.menu ul select:focus {
+    outline: none; 
+}
+
+@media only screen and (max-width: 768px) {
+    .menu ul li {
+        margin-right: 0; 
+        margin-bottom: 10px;
+        text-align: center; 
+    }
+    .menu ul select {
+        margin: 0 auto; 
+    }
+}
+
+
