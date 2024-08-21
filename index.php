@@ -17,7 +17,7 @@
         <div class="bonjour">&bull; Bonjour &bull;</div>
         <div class="hallo">&bull; Halló &bull;</div>
         <div class="gruezi">&bull; Grüezi &bull;</div>
-        <div class="inicio">Em construção...</div>
+        <div class="inicio">In costruzione...</div>
         <script>
             /* Array c/ as saudacoes e um laço responsável com tempo p cada */
             document.addEventListener("DOMContentLoaded", function() {
