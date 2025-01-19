@@ -34,13 +34,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: flex-start; /* Alinha os ícones à esquerda */
-    padding-right: 750px; /* Adiciona um pequeno espaço à esquerda */
+    justify-content: flex-start; 
+    padding-right: 750px;
 }
 
 .tech-icon {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
     transition: transform 0.3s ease;
 }
@@ -90,7 +90,7 @@
 /* Bloco de texto */
 .text-block {
     flex: 1;
-    margin-right: 250px; /* Espaçamento entre o texto e a imagem */
+    margin-right: 250px;
     margin-left: 50px;
     text-align: justify;
     padding-right: 20px;
@@ -98,7 +98,7 @@
 
 /* Bloco de imagem */
 .image-block {
-    flex: 0 0 150px; /* Tamanho fixo da imagem */
+    flex: 0 0 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,11 +107,11 @@
 
 /* Imagem circular */
 .profile-image {
-    width: 450px; /*altura da foto */
-    height: 450px; /*largura da foto */
+    width: 450px;
+    height: 450px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid white; /* Borda opcional */
+    border: 5px solid white; 
 }
 
 #home {
@@ -119,7 +119,121 @@
     color: #0a0a0a;
     padding: 100px 20px;
     box-sizing: border-box;
-}#procts, #my_projects {
+}
+
+#tech {
+    background-color: #000000;
+}
+
+#tech {
+    text-align: center;
+    margin: 0px 0;
+}
+
+#tech h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.technologies {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* Espaçamento entre os ícones */
+}
+
+.tech-item {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.tech-icon {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.tech-icon:hover {
+    transform: scale(1.1); /* Efeito de zoom no ícone */
+}
+
+.tech-info {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 80px; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.tech-item:hover .tech-info {
+    display: block; /* Exibe as tecnologias relacionadas quando o mouse passa sobre o ícone */
+}
+
+.related-icon {
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+#php:hover .related-icon {
+    opacity: 1;
+}
+
+#php .related-icon#laravel {
+    transform: translate(-100px, -30px); /* Ajuste a posição */
+}
+
+#php .related-icon#bootstrap {
+    transform: translate(100px, -30px); /* Ajuste a posição */
+}
+
+#html:hover .related-icon {
+    opacity: 1;
+}
+
+#html .related-icon#css {
+    transform: translate(-100px, -30px); /* Ajuste a posição */
+}
+
+#html .related-icon#js {
+    transform: translate(100px, -30px); /* Ajuste a posição */
+}
+
+.download-cv-content {
+    text-align: center;
+    margin-top: 250px; /* Adicionando espaço acima do botão */
+    margin-bottom: 40px; /* Adicionando espaço abaixo do botão */
+}
+
+.download-cv-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Cor do título */
+}
+
+.btn-download {
+    padding: 10px 20px;
+    background-color: #202020;
+    color: #e0e0e0;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #666666;
+    display: inline-block;
+}
+
+.btn-download:hover {
+    background-color: #666666;
+    border-color: #e0e0e0;
+}
+
+
+#procts, #my_projects {
     color: #fff; 
 }
 
@@ -136,7 +250,7 @@
     padding: 10px;
     text-align: center;
     color: #fff;
-    min-height: 300px; /* Altura mínima dos blocos */
+    min-height: 300px;
     position: relative; 
     overflow: hidden; 
 }
@@ -166,12 +280,12 @@
 }
 
 .slide.active {
-    opacity: 1; /* Mostra a imagem ativa */
+    opacity: 1;
 }
 
 .project-link {
     position: absolute;
-    bottom: 10px; /* Alinha o link na parte inferior do bloco */
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
     /* background-color: rgba(255, 255, 255, 0.8); */
@@ -203,14 +317,14 @@
 }
 
 .no-project-message {
-    position: absolute; /* Faz a mensagem ficar sobre as imagens */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta a posição para o centro exato */
-    color: black; /* Altera a cor do texto para preto */
-    font-size: 20px; /* Tamanho da fonte */
-    text-align: center; /* Centraliza o texto */
-    opacity: 0.7; /* Torna o texto ligeiramente transparente */
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black; 
+    font-size: 20px;
+    text-align: center;
+    opacity: 0.7;
 }
 
 #about {
@@ -225,6 +339,42 @@
     color: #fff; 
     padding: 100px 20px;
     box-sizing: border-box;
+}
+
+#contact .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 150px; /* espaçamento entre os itens */
+    margin-top: 20px;
+}
+
+#contact .contact-item {
+    text-align: center;
+}
+
+#contact {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #fff; /* cor do link */
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: none; /* sublinhado no hover */
+}
+
+/* tamanho icon email e linkedin */
+#contact .contact-icon {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom nas imagens ao passar o mouse */
+#contact .contact-icon:hover {
+    transform: scale(1.1); 
 }
 
 /* Estilo da tela de carregamento */
@@ -356,6 +506,52 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
+
+    .language-selector {
+        flex-direction: column;
+        margin: 10px 0;
+    }
+
+    /* Tecnologias */
+    .tech-icons {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .tech-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Conteúdo principal */
+    .home-content {
+        flex-direction: column; /* Empilha o texto e a imagem */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .text-block {
+        margin: 0;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .image-block {
+        margin: 20px 0;
+        flex: none;
+    }
+
+    .profile-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Projetos */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 15px;
+    }
+
     .loading-screen {
         flex-direction: column; 
     }
@@ -396,5 +592,78 @@
     .menu ul a:hover::after, 
     .menu ul a.active::after {
         background-color: #F4F5F0; 
+    }
+}
+
+@media (max-width: 480px) {
+    .menu ul {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    .menu ul li {
+        margin: 0;
+    }
+    
+    .menu ul a {
+        padding: 1px 5px; 
+        font-size: 16px;
+        text-decoration: none;
+        color: #F4F5F0;
+        display: block;
+    }
+    #language {
+        font-size: 16px;
+        padding: 3px 8px;
+        width: 60px
+    }
+    #tech h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .technologies {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .tech-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tech-info {
+        top: 50%;
+        left: 120%; 
+        transform: translateY(-50%);
+    }
+
+    .tech-item:hover .tech-info {
+        display: block;
+    }
+
+    #contact .contact-info {
+        flex-direction: column; /* Coloca os itens um abaixo do outro */
+        gap: 40px;
+    }
+
+
+    #contact .contact-item {
+        text-align: center;
+    }
+
+    /* Ajuste ainda maior para os ícones */
+    #contact .contact-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Caso você queira mudar o espaçamento entre o texto e o ícone, ajuste aqui */
+    #contact .contact-item p {
+        font-size: 0.9rem; /* Diminui o tamanho da fonte para telas pequenas */
     }
 }
